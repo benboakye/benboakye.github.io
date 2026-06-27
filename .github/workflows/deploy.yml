@@ -1,5 +1,9 @@
 name: Deploy to GitHub Pages
 
+# IMPORTANT: In repo Settings → Pages, set Source to "GitHub Actions"
+# (not "Deploy from a branch"). Otherwise GitHub serves raw source files
+# and the site appears blank.
+
 on:
   push:
     branches: [main, master]
