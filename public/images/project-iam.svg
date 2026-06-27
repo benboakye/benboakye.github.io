@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <rect width="400" height="240" fill="#111827"/>
+  <rect x="120" y="70" width="160" height="100" rx="12" fill="#161B22" stroke="#7C3AED" stroke-width="2"/>
+  <circle cx="160" cy="110" r="10" fill="#22D3EE"/>
+  <circle cx="200" cy="110" r="10" fill="#22C55E"/>
+  <circle cx="240" cy="110" r="10" fill="#22D3EE"/>
+  <text x="200" y="210" fill="#94A3B8" font-family="Arial,sans-serif" font-size="16" text-anchor="middle">IAM Lab</text>
+</svg>

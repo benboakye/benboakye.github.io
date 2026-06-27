@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <rect width="400" height="240" fill="#111827"/>
+  <path d="M60 170h280" stroke="#334155" stroke-width="2"/>
+  <path d="M80 170V90c20-20 40-20 60 0s40 20 60 0 40-20 60 0 40 20 60 0v80" stroke="#22D3EE" stroke-width="2" fill="none"/>
+  <circle cx="300" cy="70" r="16" fill="#7C3AED" opacity="0.8"/>
+  <text x="200" y="210" fill="#94A3B8" font-family="Arial,sans-serif" font-size="16" text-anchor="middle">AI IDS Research</text>
+</svg>

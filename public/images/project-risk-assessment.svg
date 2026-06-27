@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <rect width="400" height="240" fill="#111827"/>
+  <rect x="20" y="30" width="360" height="180" rx="12" fill="#161B22" stroke="#7C3AED" stroke-width="1.5"/>
+  <path d="M40 170h320" stroke="#22D3EE" stroke-width="2" opacity="0.5"/>
+  <path d="M40 130c40-30 80-30 120 0s80 30 120 0" stroke="#22C55E" stroke-width="2" fill="none"/>
+  <text x="200" y="60" fill="#E6EDF3" font-family="Arial,sans-serif" font-size="18" text-anchor="middle">Risk Assessment</text>
+</svg>
