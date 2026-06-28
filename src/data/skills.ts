@@ -5,12 +5,24 @@ export interface SkillGroup {
 
 export const skillGroups: SkillGroup[] = [
   {
+    title: 'Core Strengths',
+    skills: [
+      'Risk assessment (NIST CSF & MITRE ATT&CK)',
+      'Network segmentation & firewall configuration',
+      'Packet analysis & traffic validation',
+      'Linux & infrastructure lab environments',
+      'Technical documentation & lab write-ups',
+      'Network device configuration (VLANs, NAT, routing, ACLs)',
+    ],
+  },
+  {
     title: 'Security Frameworks & Methods',
     skills: [
-      'NIST Cybersecurity Framework (CSF)',
+      'NIST Cybersecurity Framework (CSF) 2.0',
       'MITRE ATT&CK',
-      'Risk assessment',
-      'Threat scenario mapping',
+      'Risk assessment & threat scenario mapping',
+      'Incident response planning',
+      'Quantitative risk / ALE concepts',
       'Security recommendations',
     ],
   },
@@ -42,17 +54,23 @@ export const skillGroups: SkillGroup[] = [
       'Nmap',
       'Kali Linux',
       'OPNsense',
+      'pfSense',
       'Cisco Packet Tracer',
+      'Splunk',
+      'Wazuh',
       'Keycloak',
       'OpenWrt',
+      'Git',
+      'GitHub',
     ],
   },
   {
     title: 'Systems & Infrastructure',
     skills: [
-      'Linux Ubuntu/OpenWrt',
+      'Linux (Ubuntu/OpenWrt)',
       'SSH',
       'Bash scripting',
+      'PowerShell',
       'Windows',
       'Active Directory fundamentals',
       'UAC',
@@ -67,5 +85,15 @@ export const skillGroups: SkillGroup[] = [
   {
     title: 'Programming & Data',
     skills: ['Python', 'Pandas', 'NumPy', 'Data cleaning', 'Technical documentation'],
+  },
+  {
+    title: 'Developing / In Progress',
+    skills: [
+      'IAM (Keycloak)',
+      'SIEM deployment & analysis',
+      'Cloud security',
+      'AI/ML for network monitoring',
+      'GRC documentation',
+    ],
   },
 ];

@@ -1,4 +1,4 @@
-TODO: Add Bernard-Boakye-Appiah-Resume.pdf to this folder.
+Resume PDF for portfolio download buttons.
 
-The resume download buttons link to:
-/resume/Bernard-Boakye-Appiah-Resume.pdf
+Source: Extras/Bernard_Boakye_Appiah_Resume_Standard_Full.pdf
+Served at: /resume/Bernard-Boakye-Appiah-Resume.pdf
