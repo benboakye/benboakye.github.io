@@ -10,6 +10,7 @@ export interface Project {
   featured: boolean;
   links: {
     caseStudy?: string;
+    report?: string;
     github?: string;
     liveDemo?: string;
   };
@@ -70,31 +71,34 @@ export const projects: Project[] = [
   },
   {
     id: 'nas-architecture',
-    title: 'Offline Network-Attached Storage Architecture',
-    category: 'Infrastructure / Local Network Systems',
+    title: 'Portable Offline Network-Attached Storage Platform',
+    category: 'Infrastructure / Embedded Networking / Local Network Systems',
     description:
-      'Engineered a portable, internet-independent NAS using Banana Pi BPI-R4, NVMe storage, OpenWrt, and Wi-Fi 7 for local multimedia file sharing.',
+      'Built and demonstrated a portable offline NAS for multimedia file sharing at Ghana Communication Technology University. Uses Banana Pi BPI-R4, OpenWrt, Wi-Fi 7 (MediaTek MT7996/BE14), NVMe storage, and the GCTU E Library browser interface for local upload/download without cloud dependency.',
     highlights: [
-      'Independent Wi-Fi access point',
-      'Firewall zones',
-      'Internet-independent local network',
-      'SQM for bufferbloat reduction',
-      'Multi-user local sharing',
-      'Chunked uploads using uHTTPd and PHP 8 CGI',
+      'Demonstrated as GCTU E Library for offline academic file access',
+      'Wi-Fi 7 local access point with NVMe storage and OpenWrt network stack',
+      'Chunked PHP uploads supporting files greater than 1 GB',
+      'Load tested with Apache JMeter up to 50 simulated concurrent users',
+      'Peak throughput ~56–58 MB/s; prototype donated to GCTU after faculty demonstration',
     ],
     tags: [
       'Banana Pi BPI-R4',
       'OpenWrt',
-      'NVMe',
       'Wi-Fi 7',
+      'NVMe',
+      'GCTU E Library',
+      'Apache JMeter',
+      'PHP',
       'SQM',
-      'uHTTPd',
-      'PHP 8 CGI',
       'Local Servers',
     ],
-    thumbnail: '/images/project-nas.svg',
+    thumbnail: '/projects/nas/assembled-top-view.png',
     featured: true,
-    links: {},
+    links: {
+      caseStudy: '/projects/portable-offline-nas',
+      report: '/reports/GCTU-NAS-Final-Year-Project.pdf',
+    },
   },
   {
     id: 'iam-lab',

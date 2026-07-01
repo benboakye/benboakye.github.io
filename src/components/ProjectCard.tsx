@@ -1,4 +1,5 @@
 import { ExternalLink, FileText, Github } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import type { Project } from '../data/projects';
 import { assetPath } from '../utils/helpers';
 
@@ -9,6 +10,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project, compact = false }: ProjectCardProps) {
   const hasLink = (url?: string) => Boolean(url);
+  const isInternal = (url?: string) => Boolean(url?.startsWith('/'));
 
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-surface/70 transition duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-glow">
@@ -58,6 +60,13 @@ export function ProjectCard({ project, compact = false }: ProjectCardProps) {
             label="Case Study"
             href={project.links.caseStudy}
             disabled={!hasLink(project.links.caseStudy)}
+            internal={isInternal(project.links.caseStudy)}
+          />
+          <ProjectLinkButton
+            icon={FileText}
+            label="View Report"
+            href={project.links.report}
+            disabled={!hasLink(project.links.report)}
           />
           <ProjectLinkButton
             icon={Github}
@@ -82,11 +91,13 @@ function ProjectLinkButton({
   label,
   href,
   disabled,
+  internal = false,
 }: {
   icon: typeof Github;
   label: string;
   href?: string;
   disabled: boolean;
+  internal?: boolean;
 }) {
   if (disabled) {
     return (
@@ -97,12 +108,24 @@ function ProjectLinkButton({
     );
   }
 
+  const className =
+    'inline-flex items-center gap-1 rounded-md border border-white/10 px-2.5 py-1.5 text-xs text-text-muted transition hover:border-accent/50 hover:text-accent';
+
+  if (internal && href) {
+    return (
+      <Link to={href} className={className}>
+        <Icon className="h-3.5 w-3.5" aria-hidden="true" />
+        {label}
+      </Link>
+    );
+  }
+
   return (
     <a
-      href={href}
-      target="_blank"
+      href={href?.startsWith('/') ? assetPath(href) : href}
+      target={href?.endsWith('.pdf') ? '_blank' : '_blank'}
       rel="noopener noreferrer"
-      className="inline-flex items-center gap-1 rounded-md border border-white/10 px-2.5 py-1.5 text-xs text-text-muted transition hover:border-accent/50 hover:text-accent"
+      className={className}
     >
       <Icon className="h-3.5 w-3.5" aria-hidden="true" />
       {label}
