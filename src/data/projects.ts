@@ -19,26 +19,30 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 'risk-assessment',
-    title: 'Cybersecurity Risk Assessment Project',
-    category: 'Governance, Risk & Compliance / Cybersecurity Analysis',
+    title: 'Critical Infrastructure Cybersecurity Risk Assessment & Governance Roadmap',
+    category: 'Governance, Risk & Compliance / Critical Infrastructure Security',
     description:
-      'Assessed cybersecurity gaps using NIST CSF and mapped threat scenarios with MITRE ATT&CK, including social engineering, supply-chain compromise, insider risk, and APT activity.',
+      'Six-phase assessment of a fictional Ontario energy operator — NIST CSF 2.0 profiling, MITRE ATT&CK mapping, IAM review, OpenSCAP hardening, SBOM vulnerability analysis, Sigma detection rules, and a prioritized 12-month governance roadmap.',
     highlights: [
-      'NIST CSF assessment',
-      'MITRE ATT&CK threat mapping',
-      'Incident analysis: Stuxnet, SolarWinds, Uber',
-      'Recommendations: MFA, segmentation, vulnerability management, incident response planning, supply-chain risk management, continuous monitoring',
+      'Three-domain threat model: Cyber · Physical · Supply Chain',
+      'OpenSCAP 88.88% baseline; 2,393-component SBOM with Grype scan',
+      'KEV/EPSS prioritization, IR tabletop, and ALE risk quantification',
+      '12-month CSF maturity roadmap targeting Tier 3',
     ],
     tags: [
-      'NIST CSF',
+      'NIST CSF 2.0',
       'MITRE ATT&CK',
-      'Risk Assessment',
-      'Threat Modeling',
-      'Security Documentation',
+      'OpenSCAP',
+      'SBOM',
+      'Sigma',
+      'OT Security',
     ],
     thumbnail: '/images/project-risk-assessment.svg',
     featured: true,
-    links: {},
+    links: {
+      caseStudy: '/projects/cybersecurity-risk-assessment',
+      report: '/reports/northgrid/NorthGrid-Full-Program-Assessment.pdf',
+    },
   },
   {
     id: 'network-security-labs',
@@ -105,11 +109,13 @@ export const projects: Project[] = [
     title: 'Identity and Access Management Lab',
     category: 'IAM / Access Control',
     description:
-      'Configured users, roles, and access control concepts in Keycloak to understand IAM workflows and role-based access foundations.',
-    tags: ['Keycloak', 'IAM', 'RBAC', 'Access Control', 'Authentication Concepts'],
+      'Keycloak IAM configuration with RBAC roles, MFA enrollment, physical-to-logical zone mapping, and vendor privilege audit — delivered as Phase 3 of the NorthGrid security program assessment.',
+    tags: ['Keycloak', 'IAM', 'RBAC', 'MFA', 'Zero Trust'],
     thumbnail: '/images/project-iam.svg',
     featured: false,
-    links: {},
+    links: {
+      caseStudy: '/projects/cybersecurity-risk-assessment#identity-access',
+    },
   },
   {
     id: 'ai-ids',
